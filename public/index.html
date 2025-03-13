@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#002D5B" id="theme-color">
+    <meta name="color-scheme" content="light dark">
+
+    <!-- Optional: Add this if you want to use a different background image for dark mode -->
+    <link rel="preload" href="dark-unsw-background.png" as="image">
+    <title>PDP Employability Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.4.0/purify.min.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="logo.png" alt="UNSW Logo">
+            <h1>PDP Employability Assistant</h1>
+        </div>
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                Welcome to the Professional Development Program assistant! How can I help you today?<br><br>
+                <span class="program-highlight">You can ask about:</span>
+                <ul>
+                    <li>Program eligibility</li>
+                    <li>Workshop details</li>
+                    <li>Volunteer work experience</li>
+                    <li>Application process</li>
+                </ul>
+            </div>
+        </div>
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Ask about the PDP program...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
